@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Genspil2._0
 {
+    //TODO: Vi overvejer om listerne skal flyttes ind i Game.cs og Request.cs
     internal class Lists
     {
         public static void ShowGamesTitle()
@@ -13,8 +14,8 @@ namespace Genspil2._0
             Console.Clear();
             Console.WriteLine("Lagerliste sortetet efter spillets navn.\n----------------------------------------\n");
             var games = Game.GetGames();
-            var sortedGames = games.OrderBy(g => g.Title).ToList();
-            foreach (var g in sortedGames)
+            var sortedGames = games.OrderBy(g => g.Title).ToList();//TODO: Lambada
+            foreach (var g in sortedGames)//TODO: lave om "g" til noget mere beskrivende
             {
                 Console.WriteLine($"Spil: {g.Title}\nUdgave: {g.Version}\nGenre: {g.Genre}\nMax antal spillere: {g.ParticipantGame}\nMin. aldersgrænse: {g.AgePlayerGame}\nStand: {g.ConditionGame}\nPris: {g.PriceGame}\nAntal: {g.AmountGame}");
                 Console.WriteLine("-----------------------------------");
@@ -27,8 +28,8 @@ namespace Genspil2._0
             Console.Clear();
             Console.WriteLine("Lagerliste sorteret efter genre.\n--------------------------------");
             var games = Game.GetGames();
-            var sortedGenre = games.OrderBy(g => g.Genre).ToList();
-            foreach (var g in sortedGenre)
+            var sortedGenre = games.OrderBy(g => g.Genre).ToList();//TODO: Lambda
+            foreach (var g in sortedGenre)//TODO: lave om "g" til noget mere beskrivende
             {
                 Console.WriteLine($"Spil: {g.Title}\nUdgave: {g.Version}\nGenre: {g.Genre}\nMax antal spillere: {g.ParticipantGame}\nMin. aldersgrænse: {g.AgePlayerGame}\nStand: {g.ConditionGame}\nPris: {g.PriceGame}\nAntal: {g.AmountGame}");
                 Console.WriteLine("-----------------------------------");
@@ -41,8 +42,8 @@ namespace Genspil2._0
             Console.Clear();
             Console.WriteLine("Liste over alle forespørgsler.\n--------------------------------------");
             var requests = Request.GetRequests();
-            var sortedRequests = requests.OrderBy(r => r.Title).ToList();
-            foreach (var r in sortedRequests)
+            var sortedRequests = requests.OrderBy(r => r.Title).ToList();//TODO: Lambda
+            foreach (var r in sortedRequests)//TODO: lave om "r" til noget mere beskrivende
             {
                 Console.WriteLine($"Kunde: {r.Name}\nEmail: {r.Email}\nTelefon: {r.Phone}\nTitel: {r.Title}\nUdgave: {r.Version}\nØnsket stand: {r.Condition}\n");
                 Console.WriteLine("-----------------------------------");

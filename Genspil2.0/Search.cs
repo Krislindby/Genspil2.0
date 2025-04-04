@@ -13,12 +13,12 @@ namespace Genspil2._0
         {
             Console.Clear();
             Console.WriteLine("Indtast titel (eller tryk enter for at springe over):");
-            string title = Console.ReadLine();
+            string title = Console.ReadLine();//TODO: tilføj To Upper?
             Console.WriteLine("Indtast genre (eller tryk enter for at springe over):");
-            string genre = Console.ReadLine();
+            string genre = Console.ReadLine();//TODO: tilføj To Upper?
             Console.WriteLine("Indtast pris (eller tryk enter for at springe over):");
-            string priceInput = Console.ReadLine();
-            double? price = string.IsNullOrEmpty(priceInput) ? (double?)null : double.Parse(priceInput);
+            string priceInput = Console.ReadLine();//TODO: lave om til double datatype, brug double.Parse.
+            double? price = string.IsNullOrEmpty(priceInput) ? (double?)null : double.Parse(priceInput);//TODO: ternary expression, muligvis find alternativ (f.eks if-else)
 
             var results = SearchGame(title, genre, price);
             Console.Clear();
@@ -36,18 +36,19 @@ namespace Genspil2._0
                 Console.Clear();
                 Console.WriteLine("Ingen spil matchede de angive kriterier.\nVil du oprette en forespørgsel på det? (Ja / Nej)");
                 string saveGame = Console.ReadLine();
-                string upperSaveGame = saveGame.ToUpper();
+                string upperSaveGame = saveGame.ToUpper();//TODO To Upper til saveGame, brug saveGame i if parameter?
 
                 if (upperSaveGame == "JA")
                 {
                     Request request = new Request();
-                    Request.requests = Request.requests ?? new List<Request>();
+                    Request.requests = Request.requests ?? new List<Request>();//TODO: forklaring/ændring til spørgsmål
                     while (request.AddRequest(Request.requests)) { }
                 }
             }
             Console.WriteLine("Indtast vilkårlig tast for at blive sendt til hovedmenuen.");
             Console.ReadLine();
         }
+        //TO DO: find alternativ til 3 lambda expressions i if statements
         public static List<Game> SearchGame(string title = null, string genre = null, double? price = null)
         {
             Console.Clear();
@@ -79,7 +80,7 @@ namespace Genspil2._0
             if (results.Any())
             {
                 Console.WriteLine("Søgeresultater:\n-----------------");
-                foreach (var r in results)
+                foreach (var r in results)//TODO: alternativ til "r", lidt mere beskrivende
                 {
                     Console.WriteLine($"Navn: {r.Name} \nEmail: {r.Email}\nTlfnr. {r.Phone}\nSpil: {r.Title}\nUdgave: {r.Version}\nØnsket stand (som minimum): {r.Condition}\n.");
                     Console.WriteLine("-----------------------------------");
@@ -89,18 +90,20 @@ namespace Genspil2._0
             {
                 Console.WriteLine("Der er ingen forespørgsler i systemet, der matcher de angive kriterier.\nVil du oprette en forespørgsel på kunden? (Ja / Nej)");
                 string makeRequest = Console.ReadLine();
-                string upperMakeRequest = makeRequest.ToUpper();
+                string upperMakeRequest = makeRequest.ToUpper();//TODO: to upper?
 
                 if (upperMakeRequest == "JA")
                 {
                     Request request = new Request();
-                    Request.requests = Request.requests ?? new List<Request>();
+                    Request.requests = Request.requests ?? new List<Request>();//TODO: forklaring/ændring til spørgsmål
                     while (request.AddRequest(Request.requests)) { }
                 }
             }
             Console.WriteLine("Indtast vilkårlig tast for at blive sendt til hovedmenuen.");
             Console.ReadLine();
         }
+
+        //TODO: alternativ til lambda's i if statements
         public static List<Request> SearchRequest(string name = null, string phone = null)
         {
             Console.Clear();

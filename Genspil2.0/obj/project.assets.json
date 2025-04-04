@@ -8,23 +8,23 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\krist\\.nuget\\packages\\": {},
+    "C:\\Users\\conta\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\krist\\source\\repos\\Genspil2.0\\Genspil2.0\\Genspil2.0.csproj",
+      "projectUniqueName": "C:\\Users\\conta\\OneDrive\\Bureaublad\\DMOoF25\\Genspil 2.0\\Genspil2.0\\Genspil2.0\\Genspil2.0.csproj",
       "projectName": "Genspil2.0",
-      "projectPath": "C:\\Users\\krist\\source\\repos\\Genspil2.0\\Genspil2.0\\Genspil2.0.csproj",
-      "packagesPath": "C:\\Users\\krist\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\krist\\source\\repos\\Genspil2.0\\Genspil2.0\\obj\\",
+      "projectPath": "C:\\Users\\conta\\OneDrive\\Bureaublad\\DMOoF25\\Genspil 2.0\\Genspil2.0\\Genspil2.0\\Genspil2.0.csproj",
+      "packagesPath": "C:\\Users\\conta\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\conta\\OneDrive\\Bureaublad\\DMOoF25\\Genspil 2.0\\Genspil2.0\\Genspil2.0\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\krist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\conta\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -33,7 +33,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
