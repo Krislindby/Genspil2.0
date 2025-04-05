@@ -23,13 +23,18 @@
                 Console.WriteLine("-----------------------------------------------\n");
                 //ændret linje 25 til TryParse
                 /*menuchoice = */int.TryParse(Console.ReadLine(), out menuchoice);//hvis input kan valideres, så sendes videre til menuchoice. Ellers bliver den null.
-                if (menuchoice < 1 || menuchoice > 9)
+
+                //Udkommenteret unødvendig dobbelt kode til at validere input fra brugeren. Kennie
+
+                /*if (menuchoice < 1 || menuchoice > 9)
                 {
                     Console.WriteLine("Du har tastet forkert. Prøv igen.");
                 }
                 else
-                {
-                    switch (menuchoice)
+                {*/
+
+
+                switch (menuchoice)
                     {
                         case 1: //opret spil
                             Game game = new Game();
@@ -62,8 +67,31 @@
                             Environment.Exit(0);//Kalder klassen Environment, så vi kan kalder på methoden Exit.
                             //TODO: Find alternativ til metoden ovenfor. f.eks deklarerer menuchoice øverst til 1, og sæt menuchoice lige med 0 i case 9.
                             break;
-                    }
+                        default:
+                        //Jeg har leget lidt med farverne i skærmen med Console.ForegroundColor og Console.BackgroundColor.
+
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        Console.BackgroundColor = ConsoleColor.Red;
+
+                        Console.WriteLine("\t-------------------- FEJL ---------------------");
+                        Console.ResetColor();
+
+                        //Console.ResetColor(); nulstiller farven.
+
+                        Console.Write("\n\nTryk på en vilkårlig tast for at");
+
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write(" PRØVE IGEN"); 
+
+                        Console.ResetColor();
+
+                        Console.ReadKey();
+
+                        menuchoice = 4; //Sætter betingelsen til en værdi som er gyldig, så den kan fortsætte i loopet. (menu kører igen)
+
+                        break;
                 }
+                //}
             } while (menuchoice >= 1 && menuchoice <= 9);
 
             Console.ReadLine();
