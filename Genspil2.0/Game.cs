@@ -49,16 +49,35 @@ namespace Genspil2._0
             set { agePlayerGame = value; }
         }
         //TODO: lave ConditionGame om til ENUM
+        //OBS: Jeg har tilføjet en enum nedenunder, men resten af koden skal tilpasses! Kennie
         public char ConditionGame
         {
             get { return conditionGame; }
             set { conditionGame = value; }
         }
-        //TODO: PriceGame kan ikke være negativ = betingelse
+        //Enum til at definere betingelserne for spillet
+        public enum ConditionOfGame
+        {
+            Repair = '0',
+            Poor = '1',
+            Good = '2',
+            Excellent = '3',
+            New = '4'
+
+        }
+        //Betingelse for PriceGame er lagt ind. Kennie
         public double PriceGame
         {
             get { return priceGame; }
-            set { priceGame = value; }
+            set {
+                if (value < 0)
+                {
+                    throw new ArgumentException("Prisen kan ikke være negativ. Indtast venligst en gyldig pris.");
+                    return;
+                }
+                else
+                    priceGame = value; 
+            }
         }
         public int AmountGame
         {
