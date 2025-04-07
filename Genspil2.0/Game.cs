@@ -86,15 +86,17 @@ namespace Genspil2._0
         }
 
         private static List<Game> games = new List<Game>();
+        private const string filePath = "games.txt";
         //TODO: Ved implementering filhåndtering, har vi ikke langere brug for predefinerede data som i metoden nedunder = kan indlæse data fra extern fil.
         public static void InitializedPredefinedGames()//Fordefinerede data i listen, som vi kan bruge i programmet til at teste funktionalitet.
         {
-            //tilføjer foruddefinerede spil
+            //tilføjer foruddefinerede spil og kalder metode til at føre objekterne ind i vores txt fil.
             Console.Clear();
             games.Add(new Game { titleGame = "Trivial Pursuit", versionGame = "Disney", genreGame = "Børn", participantGame = 2, agePlayerGame = 8, conditionGame = 'C', priceGame = 109, amountGame = 2 });
             games.Add(new Game { titleGame = "Sequence", versionGame = "Jubilæum", genreGame = "Voksne", participantGame = 4, agePlayerGame = 18, conditionGame = 'A', priceGame = 199, amountGame = 1 });
             games.Add(new Game { titleGame = "Bad People", versionGame = "Original", genreGame = "Strategi", participantGame = 2, agePlayerGame = 8, conditionGame = 'B', priceGame = 149, amountGame = 0 });
             games.Add(new Game { titleGame = "Ticket To Ride", versionGame = "Junior", genreGame = "Børn", participantGame = 4, agePlayerGame = 6, conditionGame = 'B', priceGame = 109, amountGame = 1 });
+            SaveGamesToFile();
         }
         //Constructor brugt til at intitialisere predefinerede data ovenover
         public Game() { }//TODO: flyt til linje 70 (før constructor)
@@ -141,6 +143,7 @@ namespace Genspil2._0
                 Console.Clear();
                 Game newGame = new Game(titleGame, versionGame, genreGame, participantGame, agePlayerGame, conditionGame, priceGame, amountGame);
                 games.Add(newGame);
+                SaveGamesToFile();
                 Console.WriteLine($"Spil: {titleGame}\nUdgave: {versionGame}\nGenre: {genreGame}\nMax antal spillere: {participantGame}\nMin. aldersgrænse: {agePlayerGame}\nStand: {conditionGame}\nPris: {priceGame}\nAntal: {amountGame}\n");
                 Console.WriteLine("Spillet er gemt. Indtast vilkårlig tast for at blive sendt til hovedmenuen.\n");
                 Console.ReadLine();
@@ -153,10 +156,16 @@ namespace Genspil2._0
             }
             return false; // Return false for at bryde loopet i Menuchoice.cs
         }
+
         public static List<Game> GetGames() //Metode til at returnere alle spil i games listen.
         {
             return games;
         }
+        public override string ToString()
+        {
+            return $"Spil: {titleGame}\nUdgave: {versionGame}\nGenre: {genreGame}\nMax antal spillere: {participantGame}\nMin. aldersgrænse: {agePlayerGame}\nStand: {conditionGame}\nPris: {priceGame}\nAntal: {amountGame}";
+        }
+
         public static void DeleteGame()
         {
             Console.Clear();
@@ -208,6 +217,18 @@ namespace Genspil2._0
                 Console.WriteLine("Spillet findes ikke på lagerlisten. Indtast vilkårlig tast for at blive sendt til hovedmenuen.\n");
                 Console.ReadLine();
                 return;
+            }
+        }
+
+        public static void SaveGamesToFile()
+        {
+            DataHandler.SaveToFile(filePath, games);
+        }
+        public static void LoadGamesFromFile()
+        {
+            if (File.Exists(filePath))
+            {
+                games = DataHandler.LoadFromFile<Game>(filePath);
             }
         }
     }

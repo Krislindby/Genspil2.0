@@ -8,23 +8,39 @@
     "net8.0": []
   },
   "packageFolders": {
+<<<<<<< HEAD
     "C:\\Users\\kenni\\.nuget\\packages\\": {},
+=======
+    "C:\\Users\\krist\\.nuget\\packages\\": {},
+>>>>>>> DataHandler
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\kenni\\OneDrive - UCL Erhvervsakademi og Professionshøjskole\\Dokumenter\\Datamatiker 2025\\Projekter\\Genspil 2.0 Git\\Genspil2.0\\Genspil2.0\\Genspil2.0.csproj",
       "projectName": "Genspil2.0",
       "projectPath": "C:\\Users\\kenni\\OneDrive - UCL Erhvervsakademi og Professionshøjskole\\Dokumenter\\Datamatiker 2025\\Projekter\\Genspil 2.0 Git\\Genspil2.0\\Genspil2.0\\Genspil2.0.csproj",
       "packagesPath": "C:\\Users\\kenni\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\kenni\\OneDrive - UCL Erhvervsakademi og Professionshøjskole\\Dokumenter\\Datamatiker 2025\\Projekter\\Genspil 2.0 Git\\Genspil2.0\\Genspil2.0\\obj\\",
+=======
+      "projectUniqueName": "C:\\Users\\krist\\Desktop\\DataHandler\\Genspil2.0\\Genspil2.0.csproj",
+      "projectName": "Genspil2.0",
+      "projectPath": "C:\\Users\\krist\\Desktop\\DataHandler\\Genspil2.0\\Genspil2.0.csproj",
+      "packagesPath": "C:\\Users\\krist\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\krist\\Desktop\\DataHandler\\Genspil2.0\\obj\\",
+>>>>>>> DataHandler
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
+<<<<<<< HEAD
         "C:\\Users\\kenni\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+        "C:\\Users\\krist\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> DataHandler
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

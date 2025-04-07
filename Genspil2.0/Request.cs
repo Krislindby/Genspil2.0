@@ -49,12 +49,14 @@ namespace Genspil2._0
         }
 
         public static List<Request> requests = new List<Request>();
+        private const string filePath = "requests.txt";
         //TODO: Ved implementering filhåndtering, har vi ikke langere brug for predefinerede data som i metoden nedunder = kan indlæse data fra extern fil.
         public static void InitializedPredefinedRequests()
         {
             //tilføjer foruddefinerede forespørgsler
             requests.Add(new Request { nameRequest = "Morten Jensen", emailRequest = "morten.jensen@gmail.com", phoneRequest = "22419866", titleRequest = "Uno", versionRequest = "udviddet", conditionRequest = 'B' });
             requests.Add(new Request { nameRequest = "Anne Hansen", emailRequest = "annehansen88@gmail.com", phoneRequest = "61582274", titleRequest = "Partners", versionRequest = "standard", conditionRequest = 'A' });
+            SaveRequestsToFile();
         }
         //Constructor brugt til at intitialisere predefinerede data ovenover
         public Request() { }//TODO: flyt til linje 52 (før constructor)
@@ -93,6 +95,7 @@ namespace Genspil2._0
                 Console.Clear();
                 Request newRequest = new Request(nameRequest, emailRequest, phoneRequest, titleRequest, versionRequest, conditionRequest);
                 requests.Add(newRequest);
+                SaveRequestsToFile();
                 Console.WriteLine($"Navn: {nameRequest} \nEmail: {emailRequest}\nTlfnr. {phoneRequest}\nSpil: {titleRequest}\nUdgave: {versionRequest}\nØnsket stand (som minimum): {conditionRequest}\n");
                 Console.WriteLine("Forespørgslen er gemt. Indtast vilkårlig tast for at blive sendt til hovedmenuen.\n");
                 Console.ReadLine();
@@ -105,9 +108,22 @@ namespace Genspil2._0
             }
             return false; // Return false to break the loop in Program.cs
         }
+
         public static List<Request> GetRequests()//Metode til at returnere alle request i request listen.
         {
             return requests;
+        }
+        public override string ToString()
+        {
+            return $"Navn: {Name} \nEmail: {Email}\nTlfnr. {Phone}\nSpil: {Title}\nUdgave: {Version}\nØnsket stand (som minimum): {Condition}\n";
+        }
+        public static void SaveRequestsToFile()
+        {
+            DataHandler.SaveToFile(filePath, requests);
+        }
+        public static void LoadRequestsFromFile()
+        {
+            requests = DataHandler.LoadFromFile<Request>(filePath);
         }
     }
 }

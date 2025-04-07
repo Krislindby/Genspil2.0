@@ -1,0 +1,32 @@
+Spil: Trivial Pursuit
+Udgave: Disney
+Genre: Børn
+Max antal spillere: 2
+Min. aldersgrænse: 8
+Stand: C
+Pris: 109
+Antal: 2
+Spil: Sequence
+Udgave: Jubilæum
+Genre: Voksne
+Max antal spillere: 4
+Min. aldersgrænse: 18
+Stand: A
+Pris: 199
+Antal: 1
+Spil: Bad People
+Udgave: Original
+Genre: Strategi
+Max antal spillere: 2
+Min. aldersgrænse: 8
+Stand: B
+Pris: 149
+Antal: 0
+Spil: Ticket To Ride
+Udgave: Junior
+Genre: Børn
+Max antal spillere: 4
+Min. aldersgrænse: 6
+Stand: B
+Pris: 109
+Antal: 1

@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "ivsSuX7LmPA=",
   "success": true,
   "projectFilePath": "C:\\Users\\kenni\\OneDrive - UCL Erhvervsakademi og Professionshøjskole\\Dokumenter\\Datamatiker 2025\\Projekter\\Genspil 2.0 Git\\Genspil2.0\\Genspil2.0\\Genspil2.0.csproj",
+=======
+  "dgSpecHash": "huBi7IkXNBU=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\krist\\Desktop\\DataHandler\\Genspil2.0\\Genspil2.0.csproj",
+>>>>>>> DataHandler
   "expectedPackageFiles": [],
   "logs": []
 }
